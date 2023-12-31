@@ -21,3 +21,26 @@ public:
         return ans;
     }
 };
+
+
+// Using unordered map
+// TC O(n)
+// SC O(n)
+
+class Solution {
+public:
+    int maxLengthBetweenEqualCharacters(string s) {
+        
+        unordered_map<char,int> mp;
+        int ans = -1;
+
+        for (int i=0; i<s.length(); i++){
+            if(mp.find(s[i]) != mp.end()){
+                ans = max(i-mp[s[i]]-1,ans);
+            }else{
+                mp[s[i]] = i;
+            }
+        }
+        return ans;
+    }
+};
