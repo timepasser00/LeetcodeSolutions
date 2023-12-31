@@ -2,6 +2,10 @@
 // https://leetcode.com/problems/largest-substring-between-two-equal-characters/
 
 // Solution 
+
+// Brute force  
+// TC O(n**2) 
+// SC O(1)
 class Solution {
 public:
     int maxLengthBetweenEqualCharacters(string s) {
